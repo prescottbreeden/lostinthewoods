@@ -1,0 +1,46 @@
+﻿@model lost_in_the_woods.Models.Trail
+
+<div class="add_trails_container">
+    <h2>Add a New Trail!</h2>
+    <table class="add_new_trail_table">
+        <form asp-controller="Home" asp-action="AddNewTrail" method="POST">
+            <tr>
+                <td><label asp-for="Name">Trail Name:</label></td>
+                <td><input placeholder="" asp-for="Name"></td>
+                <td><label asp-for="Elevation">Elevation Change:</label></td>
+                <td><input placeholder="" asp-for="Elevation"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p><span asp-validation-for="Name"></span></p></td>
+                <td></td>
+                <td><p><span asp-validation-for="Elevation"></span></p></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Length">Trail Length:</label></td>
+                <td><input placeholder=""  asp-for="Length"></td>
+                <td><label asp-for="Longitude">Longitude:</label></td>
+                <td><input placeholder="" asp-for="Longitude"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p><span asp-validation-for="Length"></span></p></td>
+                <td></td>
+                <td><p><span asp-validation-for="Longitude"></span></p></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Description">Description:</label></td>
+                <td><textarea asp-for="Description"></textarea></td>
+                <td><label asp-for="Latitude">Latitude:</label></td>
+                <td><input placeholder="" asp-for="Latitude"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><p><span asp-validation-for="Description"></span></p></td>
+                <td></td>
+                <td><p><span asp-validation-for="Latitude"></span></p></td>
+            </tr>
+        </table>
+        <button type="submit">Create Record!</button>
+    </form> 
+</div>

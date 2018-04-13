@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="trails_container">
+    <h1>Lost in the Woods Assingment</h1>
+    <h3>List of all current trails:</h3>
+    <table class="hikes_table">
+        <tr>
+            <th>Trail Name</th>
+            <th>Trail Length</th>
+            <th>Elevation Change</th>
+        </tr>
+        @foreach(var trail in @ViewBag.allTrails)
+        {
+            <tr>
+                <td><a href="/trails/@trail.Id">@trail.Name</a></td>
+                <td>@trail.Length miles</td>
+                <td>@trail.Elevation feet</td>
+            </tr>
+        }
+
+    </table>
+</div>
+<a href="NewTrail"><button class="add_trail">Add a new Trail</button></a>
